@@ -1,0 +1,17 @@
+<div class="panel panel-default">
+    <div class="panel-heading">
+        <h3 class="panel-title">{{achievement.alias}} - Level {{achievement.level}}
+        <span class="pull-right"><i ng-repeat="i in getNumber() track by $index"class="fa fa-star-o fa-fw"></i></span></h3>
+    </div>
+    <div class="panel-body achievementText">
+        <div class="col-md-3 col-sm-4">
+        	<img class="achievementPic" ng-src="app/images/{{achievement.name}}.jpg">
+        </div>
+        <div class="col-md-9 col-sm-8">
+            <span>{{achievement.coins}} coins</span>
+            <div>{{achievement.description}}</div>
+            <div ng-if="achievement.completed">Completed on {{achievement.completed}}</div>
+        </div>
+    </div>
+</div>
+

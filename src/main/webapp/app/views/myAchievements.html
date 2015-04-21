@@ -1,0 +1,25 @@
+<top-header title="My Achievements" titledescription="Earn coins by completing achievements"></top-header>
+
+<div>
+   	<div class="row blockContainer panel panel-default">
+		<div class="panel-heading">
+	        <h3 class="panel-title">Completed Achievements</h3>
+	    </div>
+	    <div class="panel-body">
+	       <div ng-repeat="achievement in completedAchievements" class="col-md-3">
+		       <achievement-directive achievement="achievement"></achievement-directive> 
+		    </div>
+	    </div>
+    </div>
+
+	<div class="row blockContainer panel panel-default">
+		<div class="panel-heading">
+	        <h3 class="panel-title">Pending Achievements</h3>
+	    </div>
+	    <div class="panel-body">
+	       <div ng-repeat="achievement in pendingAchievements" class="col-md-3">
+		       <achievement-directive achievement="achievement"></achievement-directive> 
+		    </div>
+	    </div>
+    </div>
+</div>

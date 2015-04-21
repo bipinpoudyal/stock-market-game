@@ -1,0 +1,26 @@
+<div class="row blockContainer headerPage">
+    <div>
+        <div class="col-md-3 section-title">
+            <span class="title-page">
+                <span ng-bind="title"/>
+            </span>
+            <div class="section-title-description">
+                <span ng-bind="titledescription"/>
+            </div>
+        </div>
+        <div class="col-md-3 col-md-offset-6 section-profile" ng-show="authenticated">
+            <img ng-src="{{$root.getFinalURL('userProfilePic')}}">
+            <div class="pull-right">
+                <span class="title-page">
+                    <span ng-bind="userName"></span>
+                </span>
+                <div id="time">
+                    {{user.coins}} coins 
+                    <span ng-if="user.coins>0">
+                        <a ng-click="redeemCoins()" class="redeemCoins">(Redeem)</a>
+                    </span>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
